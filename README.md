@@ -51,28 +51,3 @@ ajax and MongoDB.
   and `brevets.html`) to this project before you start.
 * The `docker-compose.yml` file is not given for the [brevets'](brevets)
   directory. You have to create it yourself.
-
-## Credentials file (credentials.ini)
-
-The credentials file should have the following information.
-```ini
-# Configuration of brevets calculator.
-[DEFAULT]
-author=Your Name Here
-repo=git@github.com:username/project-name.git
-quid=411******
-
-# the port you used within compose to map the host to the container
-# for example, if the port is "5001:5000", then the PORT key should
-# be 5001
-PORT=5000
-DEBUG = False
-
-# See https://flask.palletsprojects.com/en/3.0.x/quickstart/#sessions
-# about how to generate a secret key
-SECRET_KEY = Replace this with random string; os.urandom can make one
-
-# the host name for your database service.
-HOSTNAME= Replace this with the host name you use
-```
-
