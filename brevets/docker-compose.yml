@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    command: python3 flask_brevets.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/brevets
+    links:
+      - db
+  db:
+    image: mongo:7.0.2
+    hostname: "brevets_mongodb"
